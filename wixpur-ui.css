@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --accent-main: #231942;
+    --accent-secondary: #5e548e;
+    --accent-secondary-darker: #5445a0;
+    --accent-tertiary: #9f86c0;
+    --accent-pale: #9f86c05b;
+
+    --bg-dark: #090712;
+    --bg-dark-nav: #211941;
+    --fg-dark: #fefefe;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100%;
+
+    /* Safari */
+    -webkit-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* IE10+/Edge */
+    -ms-user-select: none;
+    /* Standard */
+    user-select: none;
+}
+
+.content-main {
+    padding: 1.5em;
+    height: 100%;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+}
+
+.upload-btn-wrapper label {
+    padding: 1px 0;
+    font-weight: 300;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.upload-btn-wrapper button {
+    display: inline-block;
+    margin-left: 1em;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav {
+    background-color: var(--bg-dark-nav);
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    padding-right: 1.5em;
+}
+
+.left {
+    display: inline-block;
+}
+
+.btn-nav {}
+
+.btn {
+    display: block;
+    background-color: var(--accent-pale);
+    color: white;
+    text-align: center;
+    padding: 0.9em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.1s ease-out;
+    margin-right: 0.3em;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--accent-secondary);
+}
+
+.btn:active {
+    background-color: var(--accent-tertiary);
+}
+
+.btn-buzzer {
+    vertical-align: middle;
+    margin-top: 0.5em !important;
+    width: 100%;
+    height: 60vh;
+    box-shadow: 0px 10px 18px 5px #43355c50;
+    transition: box-shadow 150ms ease-out;
+}
+
+.btn-buzzer:hover {
+    box-shadow: 0px 10px 18px 10px #43355c99;
+}
+
+#buzzer-icon {
+    transform: scale(10);
+    transition: transform 150ms ease-out;
+}
+
+.btn-buzzer:active #buzzer-icon {
+    transform: scale(8.5);
+    
+}
+
+.links {}
+
+.heading {
+    font-weight: 900;
+    font-size: 2.1em;
+}
+
+.alert {
+    padding: 20px;
+    background-color: var(--accent-secondary-darker);
+    color: white;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+
+.alert .close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alert .close:hover {
+    color: gainsboro;
+    scale: 1.1;
+}
+
+.alert .close:active {
+    color: #ff8080;
+    scale: 0.9;
+}
+
+nav {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.20em 0;
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav>ul>li {
+    display: inline;
+    float: right;
+}
+
+nav>ul>li a {
+    display: block;
+    background-color: var(--accent-pale);
+    color: white;
+    text-align: center;
+    padding: 0.9em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.1s ease-out;
+    margin-right: 0.3em;
+}
+
+nav>ul>li a:hover {
+    background-color: var(--accent-secondary);
+}
+
+nav>ul>li a:active {
+    background-color: var(--accent-tertiary);
+}
+
+@media (max-width: 500px) {
+    nav {
+        display: none;
+    }
+
+    .heading {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        padding-bottom: 0.8em;
+    }
+
+    .left {
+        display: block;
+    }
+    
+    .btn-buzzer {
+        /* font-size: 4em; */
+        width: 100%;
+        font-weight: 900;
+        margin-top: 22vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-dark);
+        color: var(--fg-dark);
+    }
+}
